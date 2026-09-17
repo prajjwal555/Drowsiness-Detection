@@ -223,42 +223,9 @@ Drowsiness detection [OPEN CV]/
 
 ---
 
-## 🚀 Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/shsarv/Machine-Learning-Projects.git
-cd "Machine-Learning-Projects/Drowsiness detection [OPEN CV]"
 ```
 
-### 2. Set up environment
-
-```bash
-python -m venv venv
-source venv/bin/activate        # Linux / macOS
-venv\Scripts\activate           # Windows
-
-pip install -r requirements.txt
-```
-
-### 3. Download the trained model
-
-The `cnnCat2.h5` model file must be placed in the `models/` folder. Download it from the link provided in the repository issues/releases, then:
-
-```bash
-mkdir models
-# Place cnnCat2.h5 inside models/
-```
-
-Or train your own model from scratch:
-
-```bash
-python model.py
-# Saves models/cnnCat2.h5 automatically
-```
-
-### 4. Run the detector
+###  Run the detector
 
 ```bash
 python drowsinessdetection.py
@@ -305,10 +272,4 @@ python drowsinessdetection.py
 
 ---
 
-<div align="center">
 
-Part of the [Machine Learning Projects](https://github.com/shsarv/Machine-Learning-Projects) collection by [Sarvesh Kumar Sharma](https://github.com/shsarv)
-
-⭐ Star the main repo if this helped you!
-
-</div>
