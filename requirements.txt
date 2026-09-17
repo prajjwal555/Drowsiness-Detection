@@ -5,3 +5,6 @@ pygame
 scikit-learn
 matplotlib
 pillow
+streamlit
+streamlit-webrtc
+av
