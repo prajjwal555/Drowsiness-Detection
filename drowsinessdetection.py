@@ -9,15 +9,15 @@ import time
 mixer.init()
 sound = mixer.Sound('alarm.wav')
 
-face = cv2.CascadeClassifier('haar cascade files\haarcascade_frontalface_alt.xml')
-leye = cv2.CascadeClassifier('haar cascade files\haarcascade_lefteye_2splits.xml')
-reye = cv2.CascadeClassifier('haar cascade files\haarcascade_righteye_2splits.xml')
+face = cv2.CascadeClassifier('haar cascade files/haarcascade_frontalface_alt.xml')
+leye = cv2.CascadeClassifier('haar cascade files/haarcascade_lefteye_2splits.xml')
+reye = cv2.CascadeClassifier('haar cascade files/haarcascade_righteye_2splits.xml')
 
 
 
 lbl=['Close','Open']
 
-model = load_model('models/cnncat2.h5')
+model = load_model('models/drowsiness_cnn_final.keras')
 path = os.getcwd()
 cap = cv2.VideoCapture(0)
 font = cv2.FONT_HERSHEY_COMPLEX_SMALL
@@ -53,7 +53,7 @@ while(True):
         #rpred = model.predict_classes(r_eye)
         # rpred = model.predict(r_eye)
         # rpred = np.round(rpred).astype(int)
-        rpred = np.argmax(model.predict(r_eye), axis=-1)
+        rpred = np.argmax(model.predict(r_eye, verbose=0), axis=-1)
         if(rpred[0]==1):
             lbl='Open' 
         if(rpred[0]==0):
@@ -71,7 +71,7 @@ while(True):
         #lpred = model.predict_classes(l_eye)
         # lpred = model.predict(l_eye)
         # lpred = np.round(lpred).astype(int)
-        lpred = np.argmax(model.predict(l_eye), axis=-1)
+        lpred = np.argmax(model.predict(l_eye, verbose=0), axis=-1)
         print(lpred)
         if(lpred[0]==1):
             lbl='Open'   

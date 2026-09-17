@@ -1,0 +1,18 @@
+Drowsiness Detection Model Evaluation
+==================================================
+
+Accuracy  : 0.9327
+Precision : 0.9406
+Recall    : 0.9327
+F1 Score  : 0.9325
+ROC-AUC   : 0.9989
+
+Classification Report:
+              precision    recall  f1-score   support
+
+  close eyes       0.88      1.00      0.94      1566
+   open eyes       1.00      0.87      0.93      1657
+
+    accuracy                           0.93      3223
+   macro avg       0.94      0.93      0.93      3223
+weighted avg       0.94      0.93      0.93      3223
